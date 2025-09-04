@@ -37,24 +37,29 @@ const publications = [
 const projects = [
   {
     title: "Smart Tourism for Ratnagiri",
-    description: "AI-powered tourism platform leveraging OpenAI API to provide personalized travel recommendations.",
+    description:
+      "AI-powered tourism platform leveraging OpenAI API to provide personalized travel recommendations.",
     impact: "40% increase in user engagement",
     tech: ["AI", "OpenAI API", "Python", "React"],
     year: "2024",
   },
   {
     title: "Music Genre Detection",
-    description: "Machine learning model for automatic music genre classification using audio feature extraction.",
+    description:
+      "Machine learning model for automatic music genre classification using audio feature extraction.",
     impact: "87% accuracy achieved",
     tech: ["Machine Learning", "Python", "TensorFlow", "Audio Processing"],
     year: "2024",
+    link: "https://music-genre-detection.vercel.app/",
   },
   {
-    title: "Stress Detection System",
-    description: "Real-time stress detection system using physiological signals and machine learning algorithms.",
+    title: "Stress Detection",
+    description:
+      "Real-time stress detection system using physiological signals and machine learning algorithms.",
     impact: "82% accuracy in real-time prediction",
     tech: ["ML", "Python", "Signal Processing", "Real-time Analytics"],
     year: "2023",
+   link: "https://stress-detection-ui.vercel.app/",
   },
 ]
 
@@ -171,36 +176,46 @@ export function ExperienceSection() {
           </div>
 
           {/* Projects Grid */}
-          <div>
-            <h3 className="font-serif font-semibold text-2xl mb-8 text-foreground">Key Projects</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {projects.map((project, index) => (
-                <Card
-                  key={index}
-                  className="p-6 bg-card border-border/50 hover:shadow-xl transition-all duration-300 hover:scale-105 group cursor-pointer"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <h4 className="font-serif font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h4>
-                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                  </div>
-                  <p className="text-foreground/80 mb-4 text-sm leading-relaxed">{project.description}</p>
-                  <div className="mb-4">
-                    <Badge className="bg-primary/20 text-primary border-primary/30">{project.impact}</Badge>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, i) => (
-                      <Badge key={i} variant="outline" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="mt-4 text-xs text-muted-foreground">{project.year}</div>
-                </Card>
-              ))}
-            </div>
-          </div>
+<div>
+  <h3 className="font-serif font-semibold text-2xl mb-8 text-foreground">Key Projects</h3>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {projects.map((project, index) => (
+      <Card
+        key={index}
+        className="p-6 bg-card border-border/50 hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+      >
+        <div className="flex items-start justify-between mb-4">
+          <h4 className="font-serif font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
+            {project.title}
+          </h4>
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground group-hover:text-primary transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          )}
+        </div>
+        <p className="text-foreground/80 mb-4 text-sm leading-relaxed">{project.description}</p>
+        <div className="mb-4">
+          <Badge className="bg-primary/20 text-primary border-primary/30">{project.impact}</Badge>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {project.tech.map((tech, i) => (
+            <Badge key={i} variant="outline" className="text-xs">
+              {tech}
+            </Badge>
+          ))}
+        </div>
+        <div className="mt-4 text-xs text-muted-foreground">{project.year}</div>
+      </Card>
+    ))}
+  </div>
+</div>
+
         </div>
       </div>
     </section>

@@ -64,7 +64,7 @@ export function FresherContactSection() {
             </a>
 
             <a
-              href="https://github.com/aalia-wadkar"
+              href="https://github.com/aaliawadkar1211"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center p-6 bg-card/80 backdrop-blur-sm rounded-xl border border-border/50 hover:shadow-lg transition-all duration-300 hover:scale-105 group"
