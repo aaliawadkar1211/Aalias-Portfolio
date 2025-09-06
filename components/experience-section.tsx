@@ -35,32 +35,33 @@ const publications = [
 ]
 
 const projects = [
-  {
-    title: "Smart Tourism for Ratnagiri",
-    description:
-      "AI-powered tourism platform leveraging OpenAI API to provide personalized travel recommendations.",
-    impact: "40% increase in user engagement",
-    tech: ["AI", "OpenAI API", "Python", "React"],
-    year: "2024",
-  },
+{
+  title: "Smart Tourism for Ratnagiri (Final Year B.E. Project)",
+  description:
+    "Led a 3-member team to build a multilingual tourism platform with AI chatbot, bookings, Google Maps integration, and 360° virtual tours.",
+  impact: "Team leadership & full-stack AI integration",
+  tech: ["AI", "OpenAI API", "Python", "React", "Google Maps API", "360° Tours"],
+  year: "2024",
+},
+
   {
     title: "Music Genre Detection",
     description:
-      "Machine learning model for automatic music genre classification using audio feature extraction.",
-    impact: "87% accuracy achieved",
-    tech: ["Machine Learning", "Python", "TensorFlow", "Audio Processing"],
+      "End-to-end ML system for automatic music genre classification. Built an audio feature extraction pipeline with librosa, trained multiple models (RandomForest, KNN, Logistic Regression, SVM), and selected an SVM classifier. Exposed the model via a FastAPI REST API (Render) and developed a modern Next.js frontend (Vercel) that allows users to record or upload audio files and view predictions with confidence scores.",
+    impact: "80% accuracy achieved",
+    tech: ["Python", "scikit-learn", "librosa", "FastAPI", "Next.js", "TailwindCSS", "Vercel", "Render"],
     year: "2024",
     link: "https://music-genre-detection.vercel.app/",
   },
   {
-    title: "Stress Detection",
-    description:
-      "Real-time stress detection system using physiological signals and machine learning algorithms.",
-    impact: "82% accuracy in real-time prediction",
-    tech: ["ML", "Python", "Signal Processing", "Real-time Analytics"],
-    year: "2023",
-   link: "https://stress-detection-ui.vercel.app/",
-  },
+  title: "Stress Detection System",
+  description: "A machine learning project that predicts stress levels based on sleep patterns, activity, and lifestyle data. Includes a trained model, REST API, and interactive web UI.",
+  impact: "Worked with healthcare-related datasets",
+  tech: ["Python", "Scikit-learn", "FastAPI", "Render", "Next.js", "Vercel"],
+  year: "2023",
+  link: "https://stress-detection-ui.vercel.app/",
+}
+
 ]
 
 export function ExperienceSection() {
